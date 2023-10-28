@@ -16,10 +16,10 @@
 .info{
   position:absolute;
   left: 50%;
-  bottom: 10%;
   top: 50%;
   width: 40%;
   height: 40%;
+  align-content: center;
   background-color: #645cba;
   border-radius: 20px;
   box-shadow: white 5px 5px 0px 3px;
@@ -27,6 +27,7 @@
 
 .info p{
 color:white;
+  margin:auto;
 }
 
 #menu{
@@ -211,4 +212,3 @@ p{
   align-content: center;
   align-self: center;
 }
-
