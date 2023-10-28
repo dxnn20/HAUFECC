@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Scooter A",
+    "maxSpeed": 30,
+    "batteryPercentage": 80
+  },
+  {
+    "name": "Scooter B",
+    "maxSpeed": 25,
+    "batteryPercentage": 90
+  },
+  {
+    "name": "Scooter C",
+    "maxSpeed": 35,
+    "batteryPercentage": 70
+  },
+  {
+    "name": "Scooter D",
+    "maxSpeed": 28,
+    "batteryPercentage": 60
+  },
+  {
+    "name": "Scooter E",
+    "maxSpeed": 32,
+    "batteryPercentage": 95
+  }
+]

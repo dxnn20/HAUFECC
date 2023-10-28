@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "haufecodingday": {
+      "hosting": {
+        "HAUFECC": [
+          "haufecodingday"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "haufecodingday"
+  }
+}

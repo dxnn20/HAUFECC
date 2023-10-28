@@ -1,0 +1,325 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  .toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover,
+  .toolbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
+
+  .content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .card svg.material-icons path {
+    fill: #888;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .card {
+    all: unset;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 40px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .card.card-small {
+    height: 16px;
+    width: 168px;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+
+  .card.highlight-card {
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+  .card.card.highlight-card span {
+    margin-left: 60px;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+  .terminal {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 6px;
+    padding-top: 45px;
+    margin-top: 8px;
+    overflow: hidden;
+    background-color: rgb(15, 15, 16);
+  }
+
+  footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+
+  svg#clouds {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+</style>
+
+<div class = "header">
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>
+        <img src = "../../assets/LOGO.png" width="200" height="200" alt = "not found" class = "logo" >
+      </span>
+
+      <span class="spacer"></span>
+      <button mat-button class = "main-button"><p>Home</p></button>
+      <a href="#reserve" ><button mat-button class = "main-button"><p>Reserve</p></button></a>
+      <a href="#manage" ><button mat-button class = "main-button" routerLink="/manage-page"><p>Manage</p></button ></a>
+      <a href="#contact" ><button mat-button class = "main-button"><p>Contact</p></button></a>
+    </mat-toolbar-row>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+  </mat-toolbar>
+    <mat-menu #menu="matMenu" [id] = "menu">
+    <button mat-menu-item>
+      <mat-icon>login</mat-icon>
+      <span>Login</span>
+    </button>
+
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+  </mat-menu>
+
+  <div class = "info">
+    <p class = "section_text">Scooter sharing,</p>
+    <p class = "section_text">The future of urban mobility.</p>
+  </div>
+
+</div>
+
+<section id = "reserve" >
+  <div class = "content">
+    <div class="matrix">
+      <div *ngFor="let row of matrix; let i = index" class="row">
+        <mat-card *ngFor="let cell of row; let j = index" class="cell section_text"
+             [ngClass]="{ 'selected': i === selectedRow && j === selectedCol }"
+             (click)="selectCell(i, j)">
+          <mat-card-content>
+            <p class="cell-text"> Scooter {{ cell }} ,{{scooters[i].brand }},{{scooters[j].color}}</p>
+          </mat-card-content>
+          <div *ngIf="((i+j)%3) === 0" class="occupied"><p>Occupied</p></div>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class = "card-container">
+      <div class = "card">
+        <p class = "section_text" align="center" >Make a reservation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id = "manage" >
+  <div class = "content manage_content">
+    <mat-form-field >
+      <mat-label>Scooter</mat-label>
+
+      <mat-select>
+        <mat-option *ngFor="let scooter of scooters" [value]="scooter.brand">
+          {{scooter.brand}}, {{scooter.model}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class = "card-container">
+      <div class = "card">
+        <p>Update</p>
+      </div>
+    </div>
+  </div>
+
+  <div class = "info-box" >
+
+
+    <p>
+      <mat-icon class = "info-icon">info</mat-icon>
+      <span class = "section_text">You can update the scooter's information by selecting the scooter from the dropdown menu and clicking the update button. </span>
+    </p>
+
+  </div>
+
+</section>
+
+<section id = "contact">
+  <div class = "content">
+    <div class = "card-container">
+      <div class = "card">
+        <p>Contact us</p>
+      </div>
+    </div>
+    <div>
+      <mat-icon class = "social_media">facebook</mat-icon>
+      <mat-icon class = "social_media">alternate_email</mat-icon>
+      <mat-icon class = "social_media">call icon</mat-icon>
+
+    </div>
+  </div>
+
+</section>
